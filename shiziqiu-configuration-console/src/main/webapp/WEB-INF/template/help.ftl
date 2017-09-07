@@ -31,7 +31,7 @@
 				<h4>简介：分布式配置管理</h4>
 				<br>
 				<p>
-					<a target="_blank" href="https://github.com/shiziqiu/shiziqiu-conf">github地址</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="https://github.com/shiziqiu/shiziqiu-configuration">github地址</a>&nbsp;&nbsp;&nbsp;&nbsp;
 					<iframe src="https://ghbtns.com/github-btn.html?user=shiziqiu&repo=shiziqiu-conf&type=star" frameborder="0" scrolling="0" width="170px" height="20px" style="margin-bottom:-5px;"></iframe>
 					<br><br>
 					<a target="_blank" href="http://kuanghe.iteye.com/admin/blogs">博客地址</a>

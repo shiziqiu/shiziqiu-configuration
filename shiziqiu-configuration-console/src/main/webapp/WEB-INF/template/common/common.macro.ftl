@@ -102,7 +102,7 @@
 			<b>Version</b> 1.4
 		</div>-->
 		<strong>Copyright &copy; 2016-${.now?string('yyyy')} &nbsp;
-			<a href="https://github.com/shiziqiu/shiziqiu-conf" target="_blank" >github</a>&nbsp;
+			<a href="https://github.com/shiziqiu/shiziqiu-configuration" target="_blank" >github</a>&nbsp;
 			<a href="http://kuanghe.iteye.com/admin/blogs" target="_blank" >博客</a>
 		</strong><!-- All rights reserved. -->
 	</footer>
