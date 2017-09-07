@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.shiziqiu</groupId>
+		<artifactId>shiziqiu-configuration</artifactId>
+		<version>0.0.1</version>
+	</parent>
+
+	<groupId>com.shiziqiu.configuration.core</groupId>
+	<artifactId>shiziqiu-configuration-core</artifactId>
+	<version>0.0.1</version>
+	<name>shiziqiu-configuration-core</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.shiziqiu.configuration.util</groupId>
+			<artifactId>shiziqiu-configuration-util</artifactId>
+			<version>${shiziqiuVersion}</version>
+		</dependency>
+
+		<!-- zookeeper -->
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>${zookeeperVersion}</version>
+		</dependency>
+
+		<!-- encache -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>${ehcacheVersion}</version>
+		</dependency>
+
+		<!-- spring-beans -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${springVersion}</version>
+		</dependency>
+	</dependencies>
+
+</project>

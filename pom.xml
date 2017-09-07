@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.shiziqiu</groupId>
+	<artifactId>shiziqiu-configuration</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+
+	<name>shiziqiu-configuration</name>
+	<description>A lightweight distributed configuration management platform.</description>
+	<url>http://www.shiziqiu.com/</url>
+	
+	<modules>
+		<module>shiziqiu-configuration-util</module>
+		<module>shiziqiu-configuration-core</module>
+		<module>shiziqiu-configuration-console</module>
+		<module>shiziqiu-configuration-example</module>
+	</modules>
+	
+	<properties>
+		<shiziqiuVersion>0.0.1</shiziqiuVersion>
+		<slf4jVersion>1.7.5</slf4jVersion>
+		<zookeeperVersion>3.4.6</zookeeperVersion>
+		<ehcacheVersion>2.9.1</ehcacheVersion>
+		<springVersion>3.2.13.RELEASE</springVersion>
+		<aspectjVersion>1.8.2</aspectjVersion>
+		<jacksonVersion>1.9.13</jacksonVersion>
+		<dbcpVersion>1.4</dbcpVersion>
+		<poolVersion>1.6</poolVersion>
+		<freemarkerVersion>2.3.20</freemarkerVersion>
+		<langVersion>2.6</langVersion>
+		<collectionsVersion>3.2.1</collectionsVersion>
+		<mybatisSpringVersion>1.2.2</mybatisSpringVersion>
+		<mybatisVersion>3.2.8</mybatisVersion>
+		<mysqlVersion>5.1.29</mysqlVersion>
+		
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<archiveClasses>false</archiveClasses>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<licenses>
+		<license>
+			<name>GNU General Public License, version 2</name>
+			<url>http://opensource.org/licenses/GPL-2.0</url>
+		</license>
+	</licenses>
+	
+	<developers>
+		<developer>
+			<id>shiziqiu</id>
+			<name>shiziqiu</name>
+			<email>1046414905@qq.com</email>
+			<url>https://github.com/shiziqiu</url>
+		</developer>
+	</developers>
+	
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<!-- Source -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>2.2.1</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- Javadoc -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.9.1</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- GPG -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.8</version>
+						<configuration>
+							<useAgent>false</useAgent>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+				</snapshotRepository>
+				<repository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+	
+</project>
